@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess a Number</title>
+  </head>
+                         <!-- Without Alert Code -->
+  <!-- <body>
+    <div class="main" id="id-main">
+      <button class="btn" onclick="again()">Again!</button>
+      <div class="container">
+        <h2>(Between 1 and 20)</h2>
+        <h1>Guess my number!</h1>
+        <div class="horizontal-line"></div>
+        <input type="number" name="input-name" id="guess" />
+        <button type="submit" class="btn2" onclick="checkGuess()">
+          Check!
+        </button>
+        <p1 class="tries">Remaining tries=<span id="tries-left">5</span></p1>
+        <div class="point">
+          <p>Total points =20</p>
+          <p>Remaining points=<span id="show">20</span></p>
+        </div>
+        <p id="message"></p> 
+      </div>
+    </div>
+    <script>
+      let remainingGuesses = 5;
+      let remainingtries = 5;
+      var total = 20;
+      const randomNumber = Math.floor(Math.random() * 20) + 1;
+      function checkGuess() {
+        console.log("randomNumber", randomNumber);
+        const userGuess = parseInt(document.getElementById("guess").value);
+        if (userGuess === randomNumber) {
+          let ele = document.getElementById("id-main");
+          ele.style.backgroundColor = "green";
+          remainingtries = remainingtries;
+          total = total + 4;
+          document.getElementById("message").textContent = "Congratulations! You guessed the correct number";
+          resetGame();
+        } else if (userGuess < randomNumber) {
+          document.getElementById("message").textContent = "Too low! Try again";
+          remainingtries = remainingtries - 1;
+          total = total - 4;
+        } else if (userGuess > randomNumber) {
+          document.getElementById("message").textContent = "Too high! Try again";
+          remainingtries = remainingtries - 1;
+          total = total - 4;
+          console.log("remainingtries", remainingtries);
+        }
+        document.getElementById("show").textContent = total;
+        remainingGuesses--;
+        if (remainingGuesses === 0) {
+          document.getElementById("message").textContent = "You lost the game";
+          resetGame();
+        } else {
+          document.getElementById("guess").value = "";
+        }
+        document.getElementById("tries-left").textContent = remainingtries;
+      }
+      function resetGame() {
+        remainingGuesses = 5;
+        document.getElementById("guess").value = "";
+      }
+      function again() {
+        window.location.reload();
+      }
+    </script>
+  </body> -->
+                              <!-- With Alert -->
+  <body>
+    <div class="main" id="id-main">
+      <button class="btn" onclick="again()">Again!</button>
+      <div class="container">
+        <h2>(Between 1 and 20)</h2>
+        <h5>Guess my number!</h5>
+        <div class="horizontal-line"></div>
+        <input type="number" name="input-name" id="guess" />
+        <button type="submit" class="btn2" onclick="checkGuess()">
+          Check!
+        </button>
+        
+        <div class="point">
+          <p class="tries">Remaining tries=<span id="tries-left">5</span></p>
+          <p>Total points =20</p>
+          <p>Remaining points=<span id="show">20</span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let remainingGuesses = 5;
+      let remainingtries = 5;
+      var total = 20;
+      const randomNumber = Math.floor(Math.random() * 20) + 1;
+      
+      // debugger
+      function checkGuess() {
+        console.log("randomNumber", randomNumber);
+        const userGuess = parseInt(document.getElementById("guess").value);
+  
+        if (userGuess === randomNumber) {
+          
+          let ele = document.getElementById("id-main");
+          ele.style.backgroundColor = "green";
+          remainingtries = remainingtries;
+          total = total + 4 ;
+          alert("Congratulations! You guessed the correct number");
+         
+        }
+         else if (userGuess < randomNumber) {
+          alert("Too low! Try again");
+          let ele = document.getElementById("id-main");
+          ele.style.backgroundColor = "#555";
+          remainingtries = remainingtries - 1;
+          total = total - 4;
+        } 
+        else if (userGuess > randomNumber) {
+          let ele = document.getElementById("id-main");
+          ele.style.backgroundColor = "#555";
+          alert("Too high! Try again");
+          remainingtries = remainingtries - 1;
+          total = total - 4;
+          console.log("remainingtries", remainingtries);
+        }
+        document.getElementById("show").innerHTML = total;
+        remainingGuesses--;
+        if (remainingGuesses === 0) {
+          alert("You lost the game");
+          resetGame();
+        } else {
+          document.getElementById("guess").value = "";
+        }
+        document.getElementById("tries-left").innerHTML = remainingtries;
+      }
+
+      function resetGame() {
+        remainingGuesses = 5;
+        document.getElementById("guess").value = "";
+      }
+      function again() {
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>
