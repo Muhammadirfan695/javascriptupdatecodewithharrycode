@@ -6,7 +6,7 @@ let d = undefined
 const auther1 = "Not Change value"
 // auther1 = 5 // Throws hte error becuace cannot be changed
 {
-    let b = 'this'
-    console.log(b)
+    let d = 'this'
+    console.log(d)
 }
-console.log(b)
+console.log(d)

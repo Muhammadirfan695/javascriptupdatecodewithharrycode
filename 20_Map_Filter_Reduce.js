@@ -1,7 +1,24 @@
+// -----------------------Yahoo Baba ----------------------
+// -----------------------Map Method---------------- 
+
+// var arr = [
+//     {fname : "Irfan" , lname : "ramzan"},
+//     {fname : "Farhan" , lname : "Zeeshan"},
+//     {fname : "Raffy" , lname : "Abuzar"},
+// ];
+
+// var b = arr.map(test);
+// console.log(b);
+
+// function test(x) {
+//     return x.fname + " " + x.lname;
+// }
+
+
 // -------------------------chapter no 5--------------------------------------------------
 
-let arr = [45, 23, 21]
-// // Console.log(arr)
+// let arr = [45, 23, 21]
+// Console.log(arr)
 // // Map Mthod js
 
 // for Each And Map diffrence
@@ -11,7 +28,7 @@ let arr = [45, 23, 21]
 // new index of array 
 
 // ---------------------------------------Map return new Array--------------------------------------
-// let a = arr.map((value, index, array)=>{
+// var a = arr.map((value, index, array)=>{
 //    console.log(value , index , array)
 //    return value + 1
 // })
@@ -29,9 +46,9 @@ let arr = [45, 23, 21]
 // Filter Method Return Array
 
 // let arr2 = [45, 23, 21, 0, 3, 5]
-// let a2 = arr2.filter((a)=>{
-//     return a<10
-// })
+// let a2 = arr2.filter((a)=>(a>10))
+//     // return a>10
+// // })
 // console.log(a2)
 
 
@@ -59,3 +76,14 @@ let arr = [45, 23, 21]
 // alert( arr.slice(1, 3) ); // e,s (copy from 1 to 3)
 
 // console.log(arr)
+
+
+// let a = 5;
+
+// function sum(a){
+//      a = a+ 10
+//      console.log("inner A", a);
+// }
+
+// sum()
+// console.log("outer A", a);

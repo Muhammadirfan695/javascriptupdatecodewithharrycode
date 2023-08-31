@@ -13,13 +13,13 @@ let num_Even_More = [21, 32, 53, 44,25,246,237,218,319]
 // console.log(num, num_More)
 
 // -----------------Sort Method----------------------------------
-// let  compare = (a, b) =>{
-//     return a - b
-// }
-// let num1 = [5121, 232, 13, 664,35,6678,67,48,89]
-// // num1.sort() //Alphabeticaly sort// 1st method 
-// num1.sort(compare)   // Sort  2nd method
-// console.log(num1)
+let  compare = (a, b) =>{
+    return a - b
+}
+let num1 = [5121, 232, 13, 664,35,6678,67,48,89]
+// num1.sort() //Alphabeticaly sort// 1st method 
+num1.sort(compare)   // Sort  2nd method
+console.log(num1)
 
 // --------------------------Splice and Slice ----------------------------
 // Splice new atom for add 
@@ -34,7 +34,7 @@ let num_Even_More = [21, 32, 53, 44,25,246,237,218,319]
 // let num3 = [3242,23,454,52,12,224,4]
 // let NewArray1 = num3.slice(2 , 5)
 // console.log(num3)   
-// console.log(NewArray1); //new newarray modifie 
+// console.log(NewArray1); //new newarray return 
 
 
 //--------------------------- function method IF-Else or Turnry Operator  --------------------------
@@ -47,6 +47,7 @@ let num_Even_More = [21, 32, 53, 44,25,246,237,218,319]
 //     function() { alert("You agreed."); },
 //     function() { alert("You canceled the execution."); }
 //   );
+
 
 // let ask = (question, yes, no) => confirm(question) ? yes() : no();
 // ask(

@@ -320,8 +320,6 @@ let myjokes = [
       "lang": "en"
     }
   
-  
-  
   ]
   
   let index = Math.floor(Math.random() * (myjokes.length - 1))
